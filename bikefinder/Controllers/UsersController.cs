@@ -25,9 +25,10 @@ namespace bikefinder.Controllers
 
         // POST: api/User
         [HttpPost]
-        public void Post([FromBody] User newUser)
+        public User Post([FromBody] User newUser)
         {
             Users.Add(newUser);
+            return newUser;
         }
 
         // PUT: api/User/5
